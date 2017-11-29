@@ -1,0 +1,58 @@
+{
+  "name": "pwa",
+  "version": "1.0.0",
+  "description": "",
+  "main": "web.dev.config.js",
+  "dependencies": {
+    "axios": "^0.17.1",
+    "extract-text-webpack-plugin": "^3.0.2",
+    "prop-types": "^15.6.0",
+    "react": "^16.1.0",
+    "react-autosuggest": "^9.3.2",
+    "react-dom": "^16.1.0",
+    "react-google-maps": "^9.4.0",
+    "react-icons": "^2.2.7",
+    "react-ink": "^6.2.0",
+    "react-redux": "^5.0.6",
+    "react-router": "^4.2.0",
+    "react-router-dom": "^4.2.2",
+    "redux": "^3.7.2",
+    "redux-thunk": "^2.2.0"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-polyfill": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-react": "^6.24.1",
+    "css-loader": "^0.28.7",
+    "html-webpack-plugin": "^2.30.1",
+    "less": "^2.7.3",
+    "less-loader": "^4.0.5",
+    "postcss-cssnext": "^3.0.2",
+    "postcss-less": "^1.1.3",
+    "postcss-loader": "^2.0.8",
+    "style-loader": "^0.19.0",
+    "webpack": "^3.8.1",
+    "webpack-dashboard": "^1.0.0",
+    "webpack-dev-server": "^2.9.4",
+    "webpack-pwa-manifest": "^3.3.2"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "web-bundle": "webpack --config web.prod.config.js --progress --colors",
+    "web-dev": "webpack-dev-server --content-base public/ --config web.dev.config.js --port 3107 --inline --hot --host 0.0.0.0 --colors",
+    "clear-cache": "gulp clear-cache"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Carduelis/pwa.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Carduelis/pwa/issues"
+  },
+  "homepage": "https://github.com/Carduelis/pwa#readme"
+}

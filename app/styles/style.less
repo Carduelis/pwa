@@ -1,0 +1,100 @@
+// get the page ready
+* {
+	outline: none;
+	box-sizing: border-box;
+}
+@pad: 1rem;
+html {
+	@media (max-width: 360px) {
+		font-size: 14px;
+	}
+}
+body {
+	padding: 0;
+	margin: 0;
+}
+body,
+button,
+input {
+	font-family: 'PT Sans', "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica,
+		Arial, "Lucida Grande", sans-serif;
+}
+@headerHeight: @pad*4;
+#root {
+	background: #e1ecea;
+	min-height: 100vh;
+	background: linear-gradient(135deg, @palette-Blue-400, @palette-Purple-400);
+}
+
+.react-web {
+	min-height: 100vh;
+}
+.page {
+	min-height: 100vh;
+	display: flex;
+	flex-wrap: wrap;
+	align-items: stretch;
+}
+.preloader-page {
+	min-height: 100vh;
+}
+.login-page {
+	display: flex;
+	width: 100%;
+	align-items: center;
+	flex-direction: column;
+	background: linear-gradient(135deg, @palette-Blue-400, @palette-Purple-400);
+	justify-content: center;
+	.logo-wrapper {
+		margin-top: -@pad*6;
+		margin-bottom: @pad*4;
+	}
+}
+
+.login-form {
+	padding: @pad*2 @pad*3;
+	background-color: rgba(255, 255, 255, .2);
+	border-radius: @pad/5;
+	.input {
+		background: transparent;
+		border: none;
+		color: @palette-Blue-50;
+		border-bottom: 2px solid @palette-Blue-50;
+	}
+	.btn {
+		margin-top: @pad*2;
+		width: 100%;
+		margin-left: auto;
+		text-transform: uppercase;
+	}
+}
+
+.login-form .input::-webkit-input-placeholder {
+	color: rgba(256, 256, 256, .7);
+}
+.pac-container {
+	background-color: rgba(255, 255, 255, 1);
+}
+.pac-item {
+	padding: @pad/3 @pad @pad/4 @pad/2;
+	&:last-child {
+		padding-bottom: 0;
+	}
+}
+.pac-icon {
+	margin-top: 5px;
+}
+
+@import "mixins.less";
+@import "palette.less";
+@import "./welcome.less";
+
+@import "color.less";
+@import "button.less";
+@import "input.less";
+@import "loader.less";
+
+// parts of the app
+
+@import "header.less";
+@import "logo.less";
